@@ -1,21 +1,16 @@
-console.log("Página de One Piece cargada correctamente");
+console.log("Página One Piece estilo Shonen Jump cargada");
 
-// Animación al hacer scroll
 const sections = document.querySelectorAll(".hidden");
 
 const observer = new IntersectionObserver(
-    (entries) => {
+    entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("show");
             }
         });
     },
-    {
-        threshold: 0.2
-    }
+    { threshold: 0.2 }
 );
 
-sections.forEach(section => {
-    observer.observe(section);
-});
+sections.forEach(section => observer.observe(section));
